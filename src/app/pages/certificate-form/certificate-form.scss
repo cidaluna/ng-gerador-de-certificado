@@ -72,4 +72,33 @@ label {
   border-radius: 6px;
   padding: 8px 12px;
   height: 40px;
+
+  &:focus {
+    box-shadow: none;
+    border: 1px solid #0000b1;
+  }
+}
+
+.content-input-group:has(.custom-input:focus) label {
+  color: #0000b1;
+}
+
+.error-message {
+  gap: 4px;
+  color: #e95f5f;
+
+  i {
+    font-size: 14px;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: middle; // Align text with the icon
+  }
+}
+
+.content-input-group:has(.error-message)>label {
+  color: #e95f5f;
 }

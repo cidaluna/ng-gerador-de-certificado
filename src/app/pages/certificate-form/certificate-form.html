@@ -6,12 +6,16 @@
 
   <div class="content-card w-100">
     <h3 class="content-card__title">Novo Certificado</h3>
-    <div class="mb-3">
+    <div class="mb-3 content-input-group">
       <label for="name" class="form-label">Nome Completo</label>
       <input type="text" class="form-control custom-input" id="name" placeholder="Digite o nome do aluno">
+      <div class="error-message d-flex align-items-center">
+        <i class="ph ph-warning-circle"></i>
+        <p>Error message</p>
+      </div>
     </div>
     <div class="mb-3 d-flex align-items-end">
-      <div class="flex-grow-1 me-2">
+      <div class="flex-grow-1 me-2 content-input-group">
         <label for="course" class="form-label">Curso</label>
         <input type="text" class="form-control custom-input" id="course" placeholder="Digite o nome do curso">
       </div>
