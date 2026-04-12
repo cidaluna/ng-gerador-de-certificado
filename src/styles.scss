@@ -1,3 +1,5 @@
+@import "bootstrap/scss/bootstrap";
+
 /* =========================================
    1. Reset básico (cross-browser)
 ========================================= */
@@ -74,4 +76,25 @@ h6 {
   overflow-wrap: break-word;
 }
 
+.main-titles {
+  height: 60px;
+  gap: 4px;
+  margin-bottom: 32px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    text-align: center;
+  }
+}
 

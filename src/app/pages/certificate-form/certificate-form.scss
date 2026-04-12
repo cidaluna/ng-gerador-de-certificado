@@ -1,0 +1,31 @@
+:host {
+  width: 900px;
+}
+
+.content-card {
+  gap: 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+
+  &__title {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #1A2856;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.topics-group {
+  margin-bottom: 32px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #1A2856;
+}
