@@ -1,5 +1,5 @@
 <h1>Hello World!</h1>
-@if (showNavBar) {
-  <app-navbar></app-navbar>
-}
+
+<app-navbar [hidden]="showNavBar"></app-navbar>
+
 <router-outlet />

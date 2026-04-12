@@ -11,5 +11,5 @@ import { Navbar } from './components/navbar/navbar';
 export class App {
   protected readonly title = signal('ng-gerador-de-certificado');
 
-  showNavBar: boolean = false;
+  showNavBar: boolean = true;
 }
