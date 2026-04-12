@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+/* =========================================
+   1. Reset básico (cross-browser)
+========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   2. Base do documento
+========================================= */
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%; // evita zoom em mobile
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* =========================================
+   3. Elementos de mídia
+========================================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================
+   4. Formulários
+========================================= */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Remove estilo padrão de botão */
+button {
+  cursor: pointer;
+  border: none;
+}
+/* =========================================
+   5. Tipografia
+========================================= */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+
