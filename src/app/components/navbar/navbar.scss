@@ -1,0 +1,21 @@
+.navbar {
+  background-color: #fff;
+  color: #1e0079;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.ph {
+  font-size: 1.250rem;
+  color: #6f42c1;
+}
+
+li:nth-child(1) {
+  list-style: none;
+  margin-right: 2rem;
+}
