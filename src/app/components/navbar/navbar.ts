@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {}
+export class Navbar implements OnInit {
+
+  ngOnInit(): void {
+    this.getMessage();
+  }
+
+  getMessage() {
+    console.log('Hello from Navbar component!');
+  }
+}
