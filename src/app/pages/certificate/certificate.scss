@@ -1,0 +1,44 @@
+.menu-certificate {
+  max-width: 800px;
+}
+
+.btn-back {
+  gap: 6px;
+
+  p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #64748b;
+    vertical-align: middle; // Alinha o texto verticalmente ao meio
+  }
+
+  i {
+    font-size: 20px;
+    color: #64748b;
+  }
+}
+
+.certificate {
+  margin-top: 32px;
+  background-image: url('../../../../public/certificate/certificate_bg.png');
+  width: 800px;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  position: relative;
+}
+
+.content-certificate {
+  width: 720px;
+  height: 470px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.icon-medal {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
