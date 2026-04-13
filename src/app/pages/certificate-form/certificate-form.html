@@ -1,0 +1,38 @@
+<div class="d-flex flex-column align-items-center">
+  <div class="main-titles">
+    <h1 class="main-titles__title">Gerar Certificado</h1>
+    <p class="main-titles__subtitle">Preencha os dados abaixo para gerar um novo certificado.</p>
+  </div>
+
+  <div class="content-card w-100">
+    <h3 class="content-card__title">Novo Certificado</h3>
+    <div class="mb-3 content-input-group">
+      <label for="name" class="form-label">Nome Completo</label>
+      <input type="text" class="form-control custom-input" id="name" placeholder="Digite o nome do aluno">
+      <div class="error-message d-flex align-items-center">
+        <i class="ph ph-warning-circle"></i>
+        <p>Error message</p>
+      </div>
+    </div>
+    <div class="mb-3 d-flex align-items-end">
+      <div class="flex-grow-1 me-2 content-input-group">
+        <label for="course" class="form-label">Curso</label>
+        <input type="text" class="form-control custom-input" id="course" placeholder="Digite o nome do curso">
+      </div>
+      <app-secondary-button></app-secondary-button>
+    </div>
+    <div class="topics-group">
+      <label for="topics" class="form-label">Tópicos</label>
+        <div class="item-list w-100">
+          <div class="item">
+            <span class="item-text">Configuração com Angular CLI</span>
+            <div class="remove-btn">
+              <i class="ph-bold ph-x"></i>
+            </div>
+          </div>
+          <hr>
+        </div>
+    </div>
+    <app-primary-button class="w-100"></app-primary-button>
+  </div>
+</div>

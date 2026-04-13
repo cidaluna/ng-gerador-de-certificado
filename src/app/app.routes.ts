@@ -1,14 +1,18 @@
 import { Routes } from '@angular/router';
-import { Certificates } from './pages/certificates/certificates';
+import { Certificate } from './pages/certificate/certificate';
 
 export const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'certificates',
+  //   pathMatch: 'full'
+  // },
+  // {
+  //   path: '',
+  //   component: Certificates
+  // },
   {
     path: '',
-    redirectTo: 'certificates',
-    pathMatch: 'full'
-  },
-  {
-    path: 'certificates',
-    component: Certificates
+    component: Certificate
   }
 ];

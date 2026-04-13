@@ -1,0 +1,104 @@
+:host {
+  width: 900px;
+}
+
+.content-card {
+  gap: 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+
+  &__title {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #1A2856;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.topics-group {
+  margin-bottom: 32px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #1A2856;
+}
+
+.item-list {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  gap: 12px;
+
+  hr {
+    all: unset;
+    display: block;
+    height: 1px;
+    background-color: #c1c1c1;
+    margin: 12px 0;
+  }
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn {
+  i {
+    font-size: 14px;
+    padding: 6px;
+    color: #e95f5f;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e2e8f0;
+      border-radius: 4px;
+    }
+  }
+}
+
+.custom-input {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  height: 40px;
+
+  &:focus {
+    box-shadow: none;
+    border: 1px solid #0000b1;
+  }
+}
+
+.content-input-group:has(.custom-input:focus) label {
+  color: #0000b1;
+}
+
+.error-message {
+  gap: 4px;
+  color: #e95f5f;
+
+  i {
+    font-size: 14px;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: middle; // Align text with the icon
+  }
+}
+
+.content-input-group:has(.error-message)>label {
+  color: #e95f5f;
+}
