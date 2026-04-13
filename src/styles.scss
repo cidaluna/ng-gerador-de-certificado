@@ -1,4 +1,4 @@
-@import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
 
 /* =========================================
    1. Reset básico (cross-browser)
@@ -27,21 +27,23 @@ body {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', sans-serif !important;
+  font-optical-sizing: auto !important; // melhora legibilidade em tamanhos pequenos
+  font-style: normal;
 }
 
 /* =========================================
    3. Elementos de mídia
 ========================================= */
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
+// img,
+// picture,
+// video,
+// canvas,
+// svg {
+//   display: block;
+//   max-width: 100%;
+// }
 
 /* =========================================
    4. Formulários
