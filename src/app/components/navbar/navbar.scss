@@ -1,7 +1,7 @@
 .navbar {
   background-color: #fff;
   color: #1e0079;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid #333;
 }
 
@@ -10,12 +10,25 @@
   height: 35px;
 }
 
-.ph {
-  font-size: 1.250rem;
+.nav-item {
+  cursor: pointer;
+  margin-left: 24px;
+}
+
+.nav-item i {
+  font-size: 20px;
   color: #6f42c1;
 }
 
-li:nth-child(1) {
-  list-style: none;
-  margin-right: 2rem;
+.active {
+  color: #6f42c1;
+}
+
+.nav-link {
+  padding: 6px !important;
+}
+
+.nav-link.active {
+  color: #6f42c1;
+  font-weight: 600;
 }
