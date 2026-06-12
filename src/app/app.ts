@@ -4,10 +4,11 @@ import { Navbar } from './components/navbar/navbar';
 import { BaseUi } from './components/base-ui/base-ui';
 import { Certificate } from './pages/certificate/certificate';
 import { CertificateForm } from './pages/certificate-form/certificate-form';
+import { Certificates } from './pages/certificates/certificates';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, BaseUi, Certificate, CertificateForm],
+  imports: [RouterOutlet,Navbar, BaseUi],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
