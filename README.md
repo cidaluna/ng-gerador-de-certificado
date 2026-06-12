@@ -9,12 +9,12 @@ Projeto Angular, gerador de certificados.
 
 1. **Clone o repositório:**
   ```bash
-    git clone https://github.com/cidaluna/angular-reusable-button.git
+    git clone https://github.com/cidaluna/ng-gerador-de-certificado.git
   ```
 
 2. **Navegue até o diretório do projeto**
 ```bash
-  cd angular-reusable-button
+  cd ng-gerador-de-certificado
 ```
 
 3. **Instale as dependências do projeto**
