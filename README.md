@@ -1,4 +1,4 @@
-# Gerador De Certificado Angular
+# Gerador De Certificados
 Projeto Angular, gerador de certificados.
 
 ### 📋 Pré-Requisitos
