@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "check-node": "where node && node -v",
+    "debug-path": "powershell -NoProfile -Command \"$env:PATH -split ';'\""
   },
   "private": true,
   "packageManager": "npm@10.8.2",
