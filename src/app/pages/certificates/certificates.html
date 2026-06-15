@@ -4,18 +4,18 @@
     <p class="main-titles__subtitle">Visualize todos os certificados gerados</p>
   </div>
 
-  <!-- <div class="content-card">
+  <div class="content-card">
     <i class="ph ph-certificate"></i>
     <div class="content-titles">
       <h3 class="content-titles__title">Nenhum certificado gerado</h3>
       <p class="content-titles__subtitle">Os certificados gerados aparecerão aqui</p>
     </div>
-    <app-secondary-button></app-secondary-button>
-  </div> -->
-
-  <div class="list-certificates">
-    <app-certificate-item></app-certificate-item>
-    <app-certificate-item></app-certificate-item>
-    <app-certificate-item></app-certificate-item>
+    <app-secondary-button routerLink="/certificados/novo" [textButton]="'Gerar certificado'"></app-secondary-button>
   </div>
+
+  <!-- <div class="list-certificates">
+    <app-certificate-item></app-certificate-item>
+    <app-certificate-item></app-certificate-item>
+    <app-certificate-item></app-certificate-item>
+  </div> -->
 </div>
