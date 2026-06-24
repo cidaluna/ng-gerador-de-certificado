@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PrimaryButton {
   @Input({ required: true }) textButton!: string;
-  @Input() disabled: boolean = false;
+  @Input() disabled: boolean | null = false;
 }
