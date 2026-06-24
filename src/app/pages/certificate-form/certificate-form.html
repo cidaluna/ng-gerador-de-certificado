@@ -8,7 +8,7 @@
     <h3 class="content-card__title">Novo Certificado</h3>
     <div class="mb-3 content-input-group">
       <label for="name" class="form-label">Nome Completo</label>
-      <input [(ngModel)]="name" #nameRef="ngModel" maxlength="100" required name="name" type="text" class="form-control custom-input" id="name" placeholder="Digite o nome do aluno">
+      <input [(ngModel)]="certificate.name" #nameRef="ngModel" maxlength="100" required name="name" type="text" class="form-control custom-input" id="name" placeholder="Digite o nome do aluno">
         @if (validatorField(nameRef)) {
           <div class="error-message d-flex align-items-center">
             <i class="ph ph-warning-circle"></i>
@@ -28,27 +28,28 @@
         }
       </div>
       <app-secondary-button
-      [disabled]="true"
+      (click)="addCourse(courseRef)"
       [iconPhClass]="'ph ph-plus'"
       [textButton]="'Adicionar'"
+      [disabled]="course.trim().length === 0"
       [ngStyle]="validatorField(courseRef) ? {'margin-bottom': '24px'} : {}"></app-secondary-button>
     </div>
     <div class="topics-group">
       <label for="topics" class="form-label">Tópicos</label>
         <div class="item-list w-100">
-          @for (item of topics; track $index) {
+          @for (item of certificate.topics; track $index) {
             <div class="item">
               <span class="item-text">{{ item }}</span>
-              <div class="remove-btn">
+              <div (click)="removeCourse($index)" class="remove-btn">
                 <i class="ph-bold ph-x"></i>
               </div>
             </div>
-            @if ($index + 1 !== topics.length) {
+            @if ($index + 1 !== certificate.topics.length) {
               <hr>
             }
           }
         </div>
     </div>
-    <app-primary-button class="w-100" [textButton]="'Gerar certificado teste'" [disabled]="true"></app-primary-button>
+    <app-primary-button (click)="submit()" class="w-100" [textButton]="'Gerar certificado teste'" [disabled]="!validatorForm()"></app-primary-button>
   </form>
 </div>
