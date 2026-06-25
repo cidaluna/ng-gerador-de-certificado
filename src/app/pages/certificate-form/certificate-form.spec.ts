@@ -1,6 +1,9 @@
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CertificateForm } from './certificate-form';
+import { TranslationService } from '../../i18n/translation.service';
 
 describe('CertificateForm', () => {
   let component: CertificateForm;
@@ -9,6 +12,7 @@ describe('CertificateForm', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CertificateForm],
+      providers: [provideHttpClient(), provideHttpClientTesting(), TranslationService],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CertificateForm);
