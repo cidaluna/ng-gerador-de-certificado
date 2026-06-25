@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "listCertificates": "Listar certificados",
+    "generateCertificate": "Gerar certificado",
+    "logoAlt": "Logo"
+  },
+  "languages": {
+    "pt-BR": "Português",
+    "en-US": "English"
+  },
+  "certificates": {
+    "title": "Lista dos certificados gerados",
+    "subtitle": "Visualize todos os certificados gerados",
+    "emptyTitle": "Nenhum certificado gerado",
+    "emptySubtitle": "Os certificados gerados aparecerão aqui",
+    "generateButton": "Gerar certificado"
+  },
+  "form": {
+    "title": "Gerar Certificado",
+    "subtitle": "Preencha os dados abaixo para gerar um novo certificado.",
+    "newCertificate": "Novo Certificado",
+    "fullName": "Nome Completo",
+    "fullNamePlaceholder": "Digite o nome do aluno",
+    "nameRequired": "O nome do aluno é obrigatório",
+    "course": "Curso",
+    "coursePlaceholder": "Digite o nome do curso",
+    "courseRequired": "O nome do curso é obrigatório",
+    "add": "Adicionar",
+    "topics": "Tópicos",
+    "generateTest": "Gerar certificado teste"
+  },
+  "certificate": {
+    "back": "Voltar",
+    "medalAlt": "Ícone de Medalha",
+    "signatureAlt": "Assinatura",
+    "title": "CERTIFICADO DE CONCLUSÃO",
+    "provesThat": "Este certificado comprova que",
+    "completedActivities": "concluiu com sucesso as seguintes atividades:",
+    "issuedOn": "Emitido em {{date}}",
+    "studentNameLabel": "Nome do Aluno:",
+    "generatedOn": "Gerado em {{date}}",
+    "view": "Visualizar",
+    "add": "Adicionar"
+  }
+}

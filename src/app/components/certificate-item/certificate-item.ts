@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
-import { SecondaryButton } from "../secondary-button/secondary-button";
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
+
+import { SecondaryButton } from '../secondary-button/secondary-button';
+import { TranslatePipe } from '../../i18n/translate.pipe';
 
 @Component({
   selector: 'app-certificate-item',
-  imports: [SecondaryButton],
+  imports: [SecondaryButton, TranslatePipe],
   templateUrl: './certificate-item.html',
   styleUrl: './certificate-item.scss',
 })
 export class CertificateItem {
-  id: string = '1';
+  id = '1';
 
-  constructor(private readonly router: Router){}
+  constructor(private readonly router: Router) {}
 
   redirectCertificate() {
     this.router.navigate(['/certificado', 2]);

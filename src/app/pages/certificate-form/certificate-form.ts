@@ -1,57 +1,50 @@
 import { Component } from '@angular/core';
-import { SecondaryButton } from '../../components/secondary-button/secondary-button';
-import { PrimaryButton } from "../../components/primary-button/primary-button";
 import { FormsModule, NgControl, NgModel } from '@angular/forms';
-import { NgStyle, CommonModule } from '@angular/common';
+import { CommonModule, NgStyle } from '@angular/common';
+
+import { SecondaryButton } from '../../components/secondary-button/secondary-button';
+import { PrimaryButton } from '../../components/primary-button/primary-button';
 import { Certificate } from '../../interfaces/certificate.interface';
 import { CertificateService } from '../../services/certificate';
+import { TranslatePipe } from '../../i18n/translate.pipe';
 
 @Component({
   selector: 'app-certificate-form',
-  imports: [CommonModule, SecondaryButton, PrimaryButton, FormsModule, NgStyle],
+  imports: [CommonModule, SecondaryButton, PrimaryButton, FormsModule, NgStyle, TranslatePipe],
   templateUrl: './certificate-form.html',
   styleUrl: './certificate-form.scss',
 })
 export class CertificateForm {
+  constructor(private readonly certificateService: CertificateService) {}
 
-  constructor(private readonly certificateService: CertificateService){
-
-  }
-
-  course: string = '';
+  course = '';
   certificate: Certificate = {
     topics: [],
     name: '',
-    date: ''
+    date: '',
   };
-
 
   validatorField(control: NgControl) {
     return control.invalid && control.touched;
   }
 
   validatorForm() {
-    const valid = (
-        this.certificate.topics.length > 0 &&
-        this.certificate.name.length > 3 &&
-        this.certificate.topics.every(t => t.trim().length > 0) // garante que não há tópico vazio
-      );
-    return valid;
+    return (
+      this.certificate.topics.length > 0 &&
+      this.certificate.name.length > 3 &&
+      this.certificate.topics.every((topic) => topic.trim().length > 0)
+    );
   }
 
   addCourse(courseRef: NgModel) {
     const value = this.course.trim();
     if (!value) {
-      courseRef.control.markAsTouched(); // mostra erro se tentar adicionar vazio
+      courseRef.control.markAsTouched();
       return;
     }
 
     this.certificate.topics.push(value);
-
-    // limpa o campo
     this.course = '';
-
-    // 2. reseta o estado do controle (resolve o bug do "dirty"/touched falso)
     courseRef.control.markAsPristine();
     courseRef.control.markAsUntouched();
   }
@@ -61,7 +54,7 @@ export class CertificateForm {
   }
 
   submit() {
-    if(!this.validatorForm()) return;
+    if (!this.validatorForm()) return;
     this.certificate.date = this.currentDate();
     this.certificateService.addCertificate(this.certificate);
     console.log(this.certificate);
@@ -73,7 +66,6 @@ export class CertificateForm {
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
     const year = String(currentDate.getFullYear());
 
-    const formatDate = `${day}/${month}/${year}`;
-    return formatDate;
+    return `${day}/${month}/${year}`;
   }
 }

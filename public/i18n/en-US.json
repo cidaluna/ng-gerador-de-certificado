@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "listCertificates": "List certificates",
+    "generateCertificate": "Generate certificate",
+    "logoAlt": "Logo"
+  },
+  "languages": {
+    "pt-BR": "Português",
+    "en-US": "English"
+  },
+  "certificates": {
+    "title": "Generated certificates list",
+    "subtitle": "View all generated certificates",
+    "emptyTitle": "No certificates generated",
+    "emptySubtitle": "Generated certificates will appear here",
+    "generateButton": "Generate certificate"
+  },
+  "form": {
+    "title": "Generate Certificate",
+    "subtitle": "Fill in the details below to generate a new certificate.",
+    "newCertificate": "New Certificate",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter the student's name",
+    "nameRequired": "Student name is required",
+    "course": "Course",
+    "coursePlaceholder": "Enter the course name",
+    "courseRequired": "Course name is required",
+    "add": "Add",
+    "topics": "Topics",
+    "generateTest": "Generate test certificate"
+  },
+  "certificate": {
+    "back": "Back",
+    "medalAlt": "Medal icon",
+    "signatureAlt": "Signature",
+    "title": "CERTIFICATE OF COMPLETION",
+    "provesThat": "This certificate certifies that",
+    "completedActivities": "has successfully completed the following activities:",
+    "issuedOn": "Issued on {{date}}",
+    "studentNameLabel": "Student name:",
+    "generatedOn": "Generated on {{date}}",
+    "view": "View",
+    "add": "Add"
+  }
+}
