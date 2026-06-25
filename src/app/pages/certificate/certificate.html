@@ -2,13 +2,13 @@
   <div class="d-flex justify-content-between align-items-center menu-certificate w-100">
     <div routerLink="/" class="d-flex align-items-center btn-back">
       <i class="ph ph-arrow-left"></i>
-      <p class="m-0">{{ 'certificate.back' | translate }}</p>
+      <p class="m-0">{{ 'certificate.back' | transloco }}</p>
     </div>
 
     <i class="ph ph-download"></i>
     <app-secondary-button
       [iconPhClass]="'ph ph-plus'"
-      [textButton]="'certificate.add' | translate"
+      [textButton]="'certificate.add' | transloco"
     ></app-secondary-button>
   </div>
 
@@ -16,29 +16,29 @@
     <img
       class="icon-medal"
       src="certificate/certificate_ribbon.png"
-      [alt]="'certificate.medalAlt' | translate"
+      [alt]="'certificate.medalAlt' | transloco"
     />
     <div class="content-certificate">
       <img
         class="img-signature"
         src="certificate/certificate_signature.svg"
-        [alt]="'certificate.signatureAlt' | translate"
+        [alt]="'certificate.signatureAlt' | transloco"
       />
       <div class="info-certificate d-flex flex-column align-items-center">
         <div class="info__titles">
-          <h1>{{ 'certificate.title' | translate }}</h1>
-          <p>{{ 'certificate.provesThat' | translate }}</p>
+          <h1>{{ 'certificate.title' | transloco }}</h1>
+          <p>{{ 'certificate.provesThat' | transloco }}</p>
         </div>
         <p class="info-name">Cida Luna</p>
         <div>
-          <p class="list-topics-group__title">{{ 'certificate.completedActivities' | translate }}</p>
+          <p class="list-topics-group__title">{{ 'certificate.completedActivities' | transloco }}</p>
           <p class="list-topics-group__paragraph">
             Angular 21, Signals, NgRX, RxJS, DevSecOps, Java, SpringBoot, Bootstrap, Oracle, MongoDB,
             Routes, Grafana, Dockerfile, Bitbucket, Git, DataDog
           </p>
         </div>
       </div>
-      <p class="start-date">{{ 'certificate.issuedOn' | translate: { date: '18/04/2026' } }}</p>
+      <p class="start-date">{{ 'certificate.issuedOn' | transloco: { date: '18/04/2026' } }}</p>
     </div>
   </div>
 </div>

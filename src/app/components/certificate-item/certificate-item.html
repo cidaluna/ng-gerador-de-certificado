@@ -1,13 +1,13 @@
 <div class="card p-3 custom-card">
   <div class="d-flex justify-content-between align-items-center">
     <div>
-      <div class="fw-bold name">{{ 'certificate.studentNameLabel' | translate }}</div>
+      <div class="fw-bold name">{{ 'certificate.studentNameLabel' | transloco }}</div>
       <small class="small-date">
-        {{ 'certificate.generatedOn' | translate: { date: '20/04/2026' } }}
+        {{ 'certificate.generatedOn' | transloco: { date: '20/04/2026' } }}
       </small>
     </div>
     <app-secondary-button
-      [textButton]="'certificate.view' | translate"
+      [textButton]="'certificate.view' | transloco"
       (click)="redirectCertificate()"
     ></app-secondary-button>
   </div>

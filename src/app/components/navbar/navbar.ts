@@ -1,23 +1,25 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-import { TranslatePipe } from '../../i18n/translate.pipe';
-import { TranslationService } from '../../i18n/translation.service';
 import { AppLocale, SUPPORTED_LOCALES } from '../../i18n/supported-locales';
+import { TranslocoModule } from '@jsverse/transloco';
+import { LanguageService } from '../../i18n/language.service';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, RouterModule, TranslatePipe],
+  imports: [RouterModule, TranslocoModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
 export class Navbar {
-  private readonly translation = inject(TranslationService);
+  private readonly translation = inject(LanguageService);
 
   readonly languages = SUPPORTED_LOCALES;
   readonly currentLang = this.translation.currentLang;
 
   setLanguage(locale: AppLocale): void {
-    void this.translation.use(locale);
+    void this.translation.setLanguage(locale).catch((err) => {
+      console.error('[i18n] falha ao trocar idioma:', err);
+    });
   }
 }

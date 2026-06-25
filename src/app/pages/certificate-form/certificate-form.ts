@@ -6,11 +6,11 @@ import { SecondaryButton } from '../../components/secondary-button/secondary-but
 import { PrimaryButton } from '../../components/primary-button/primary-button';
 import { Certificate } from '../../interfaces/certificate.interface';
 import { CertificateService } from '../../services/certificate';
-import { TranslatePipe } from '../../i18n/translate.pipe';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-certificate-form',
-  imports: [CommonModule, SecondaryButton, PrimaryButton, FormsModule, NgStyle, TranslatePipe],
+  imports: [CommonModule, SecondaryButton, PrimaryButton, FormsModule, NgStyle, TranslocoModule],
   templateUrl: './certificate-form.html',
   styleUrl: './certificate-form.scss',
 })

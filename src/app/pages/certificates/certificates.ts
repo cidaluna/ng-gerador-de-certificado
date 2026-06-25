@@ -3,11 +3,11 @@ import { RouterLink } from '@angular/router';
 
 import { CertificateItem } from '../../components/certificate-item/certificate-item';
 import { SecondaryButton } from '../../components/secondary-button/secondary-button';
-import { TranslatePipe } from '../../i18n/translate.pipe';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-certificates',
-  imports: [CertificateItem, SecondaryButton, RouterLink, TranslatePipe],
+  imports: [CertificateItem, SecondaryButton, RouterLink, TranslocoModule],
   templateUrl: './certificates.html',
   styleUrl: './certificates.scss',
 })

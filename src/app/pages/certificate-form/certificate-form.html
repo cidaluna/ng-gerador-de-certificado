@@ -1,13 +1,13 @@
 <div class="d-flex flex-column align-items-center">
   <div class="main-titles">
-    <h1 class="main-titles__title">{{ 'form.title' | translate }}</h1>
-    <p class="main-titles__subtitle">{{ 'form.subtitle' | translate }}</p>
+    <h1 class="main-titles__title">{{ 'form.title' | transloco }}</h1>
+    <p class="main-titles__subtitle">{{ 'form.subtitle' | transloco }}</p>
   </div>
 
   <form #form="ngForm" novalidate class="content-card w-100">
-    <h3 class="content-card__title">{{ 'form.newCertificate' | translate }}</h3>
+    <h3 class="content-card__title">{{ 'form.newCertificate' | transloco }}</h3>
     <div class="mb-3 content-input-group">
-      <label for="name" class="form-label">{{ 'form.fullName' | translate }}</label>
+      <label for="name" class="form-label">{{ 'form.fullName' | transloco }}</label>
       <input
         [(ngModel)]="certificate.name"
         #nameRef="ngModel"
@@ -17,18 +17,18 @@
         type="text"
         class="form-control custom-input"
         id="name"
-        [placeholder]="'form.fullNamePlaceholder' | translate"
+        [placeholder]="'form.fullNamePlaceholder' | transloco"
       />
       @if (validatorField(nameRef)) {
         <div class="error-message d-flex align-items-center">
           <i class="ph ph-warning-circle"></i>
-          <p>{{ 'form.nameRequired' | translate }}</p>
+          <p>{{ 'form.nameRequired' | transloco }}</p>
         </div>
       }
     </div>
     <div class="mb-3 d-flex align-items-end">
       <div class="flex-grow-1 me-2 content-input-group">
-        <label for="course" class="form-label">{{ 'form.course' | translate }}</label>
+        <label for="course" class="form-label">{{ 'form.course' | transloco }}</label>
         <input
           [(ngModel)]="course"
           #courseRef="ngModel"
@@ -38,25 +38,25 @@
           type="text"
           class="form-control custom-input"
           id="course"
-          [placeholder]="'form.coursePlaceholder' | translate"
+          [placeholder]="'form.coursePlaceholder' | transloco"
         />
         @if (validatorField(courseRef)) {
           <div class="error-message d-flex align-items-center">
             <i class="ph ph-warning-circle"></i>
-            <p>{{ 'form.courseRequired' | translate }}</p>
+            <p>{{ 'form.courseRequired' | transloco }}</p>
           </div>
         }
       </div>
       <app-secondary-button
         (click)="addCourse(courseRef)"
         [iconPhClass]="'ph ph-plus'"
-        [textButton]="'form.add' | translate"
+        [textButton]="'form.add' | transloco"
         [disabled]="course.trim().length === 0"
         [ngStyle]="validatorField(courseRef) ? { 'margin-bottom': '24px' } : {}"
       ></app-secondary-button>
     </div>
     <div class="topics-group">
-      <label for="topics" class="form-label">{{ 'form.topics' | translate }}</label>
+      <label for="topics" class="form-label">{{ 'form.topics' | transloco }}</label>
       <div class="item-list w-100">
         @for (item of certificate.topics; track $index) {
           <div class="item">
@@ -74,7 +74,7 @@
     <app-primary-button
       (click)="submit()"
       class="w-100"
-      [textButton]="'form.generateTest' | translate"
+      [textButton]="'form.generateTest' | transloco"
       [disabled]="!validatorForm()"
     ></app-primary-button>
   </form>

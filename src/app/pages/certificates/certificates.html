@@ -1,18 +1,18 @@
 <div class="d-flex flex-column align-itens-center">
   <div class="main-titles">
-    <h1 class="main-titles__title">{{ 'certificates.title' | translate }}</h1>
-    <p class="main-titles__subtitle">{{ 'certificates.subtitle' | translate }}</p>
+    <h1 class="main-titles__title">{{ 'certificates.title' | transloco }}</h1>
+    <p class="main-titles__subtitle">{{ 'certificates.subtitle' | transloco }}</p>
   </div>
 
   <div class="content-card">
     <i class="ph ph-certificate"></i>
     <div class="content-titles">
-      <h3 class="content-titles__title">{{ 'certificates.emptyTitle' | translate }}</h3>
-      <p class="content-titles__subtitle">{{ 'certificates.emptySubtitle' | translate }}</p>
+      <h3 class="content-titles__title">{{ 'certificates.emptyTitle' | transloco }}</h3>
+      <p class="content-titles__subtitle">{{ 'certificates.emptySubtitle' | transloco }}</p>
     </div>
     <app-secondary-button
       routerLink="/certificados/novo"
-      [textButton]="'certificates.generateButton' | translate"
+      [textButton]="'certificates.generateButton' | transloco"
     ></app-secondary-button>
   </div>
 
