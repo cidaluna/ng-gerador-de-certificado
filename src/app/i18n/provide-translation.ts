@@ -1,20 +1,9 @@
-import { APP_INITIALIZER, EnvironmentProviders, makeEnvironmentProviders } from '@angular/core';
-import { provideHttpClient } from '@angular/common/http';
+import { inject, provideAppInitializer } from '@angular/core';
+import { LanguageService } from './language.service';
 
-import { TranslationService } from './translation.service';
-
-function initTranslation(translation: TranslationService): () => Promise<void> {
-  return () => translation.init();
-}
-
-export function provideTranslation(): EnvironmentProviders {
-  return makeEnvironmentProviders([
-    provideHttpClient(),
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initTranslation,
-      deps: [TranslationService],
-      multi: true,
-    },
-  ]);
+export function provideTranslationInitializer() {
+  return provideAppInitializer(() => {
+    const languageService = inject(LanguageService);
+    return languageService.init(); // Promise<void> — o Angular espera ela resolver antes de exibir a primeira tela
+  });
 }
