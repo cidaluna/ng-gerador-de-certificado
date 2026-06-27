@@ -1,0 +1,57 @@
+:host {
+  width: 900px;
+}
+
+.content-card {
+  gap: 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+  margin: 0 0 16px;
+
+  &__title {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #1A2856;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+  }
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #166cc9 0%, #003064 100%);
+  color: #f1f1f1;
+  padding: 8px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.testar-api {
+  padding: 1.5rem;
+
+  .idioma-ativo {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .erro {
+    margin-top: 1rem;
+    color: #d32f2f;
+  }
+
+  .lista-certificados {
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
+}

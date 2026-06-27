@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-secondary-button',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './secondary-button.html',
   styleUrl: './secondary-button.scss',

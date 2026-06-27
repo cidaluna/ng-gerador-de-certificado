@@ -1,0 +1,33 @@
+<section class="testar-api">
+  <div class="d-flex flex-column align-itens-center">
+    <div class="main-api">
+      <h1 class="main-api__title">{{ 'testApi.titulo' | transloco }}</h1>
+      <p class="idioma-ativo">
+        {{ 'languages.label' | transloco }}: <strong>{{ idiomaAtivo() }}</strong>
+      </p>
+    </div>
+
+    <div class="content-card">
+      <button type="button" (click)="buscarCertificadosApi()" [disabled]="loading()">
+        @if (loading()) {
+        {{ 'testApi.buscando' | transloco }}
+        } @else {
+        {{ 'testApi.botaoBuscar' | transloco }}
+        }
+      </button>
+
+      @if (erro()) {
+        <p class="erro">{{ erro()! | transloco }}</p>
+      }
+
+      <h4>Dados dinâmicos abaixo:</h4>
+      @if (certificados().length > 0) {
+        <ul class="lista-certificados">
+          @for (cert of certificados(); track cert.id) {
+            <li>{{ cert.curso }} — {{ cert.cargaHoraria }}h</li>
+          }
+        </ul>
+      }
+    </div>
+  </div>
+</section>

@@ -6,6 +6,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-certificate-item',
+  standalone: true,
   imports: [SecondaryButton, TranslocoModule],
   templateUrl: './certificate-item.html',
   styleUrl: './certificate-item.scss',
