@@ -3,3 +3,9 @@ export interface Certificate {
   topics: string[];
   date: string;
 }
+
+export interface FakeApi {
+  id: number;
+  curso: string;
+  cargaHoraria: number;
+}

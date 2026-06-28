@@ -6,6 +6,7 @@ import { BaseUi } from './components/base-ui/base-ui';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, Navbar, BaseUi],
   templateUrl: './app.html',
   styleUrl: './app.scss',

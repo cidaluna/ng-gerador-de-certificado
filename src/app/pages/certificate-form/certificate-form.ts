@@ -10,6 +10,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-certificate-form',
+  standalone: true,
   imports: [CommonModule, SecondaryButton, PrimaryButton, FormsModule, NgStyle, TranslocoModule],
   templateUrl: './certificate-form.html',
   styleUrl: './certificate-form.scss',

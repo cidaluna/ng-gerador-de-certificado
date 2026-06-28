@@ -27,6 +27,17 @@
             {{ 'nav.generateCertificate' | transloco }}
           </a>
         </li>
+        <li class="nav-item d-flex align-items-center">
+          <i class="ph ph-flask"></i>
+          <a
+            class="nav-link"
+            routerLink="/test-api"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            {{ 'nav.testApi' | transloco }}
+          </a>
+        </li>
         <li class="nav-item language-switcher d-flex align-items-center">
           @for (locale of languages; track locale) {
             <button

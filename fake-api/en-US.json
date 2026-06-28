@@ -1,0 +1,6 @@
+{
+  "certificados": [
+    { "id": 1, "curso": "Introduction to Angular", "cargaHoraria": 20 },
+    { "id": 2, "curso": "Advanced TypeScript", "cargaHoraria": 15 }
+  ]
+}

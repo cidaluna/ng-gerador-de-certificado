@@ -32,5 +32,7 @@ Projeto Angular, gerador de certificados.
    http://localhost:4200/
    ```
 
-
-
+6. **Em outro terminal, dentro de fake-api rode o comando:**
+  ```bash
+    node server.js
+   ```

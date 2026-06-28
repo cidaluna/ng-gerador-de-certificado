@@ -2,11 +2,19 @@
   "nav": {
     "listCertificates": "List certificates",
     "generateCertificate": "Generate certificate",
-    "logoAlt": "Logo"
+    "logoAlt": "Logo",
+    "testApi": "Test Api"
+  },
+  "testApi": {
+    "titulo": "Test API integration",
+    "botaoBuscar": "Fetch certificates",
+    "buscando": "Fetching...",
+    "erroAoBuscar": "Could not fetch certificates."
   },
   "languages": {
     "pt-BR": "Português",
-    "en-US": "English"
+    "en-US": "English",
+    "label": "Active language"
   },
   "certificates": {
     "title": "Generated certificates list",

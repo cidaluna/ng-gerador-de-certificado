@@ -2,11 +2,19 @@
   "nav": {
     "listCertificates": "Listar certificados",
     "generateCertificate": "Gerar certificado",
-    "logoAlt": "Logo"
+    "logoAlt": "Logo",
+    "testApi": "Testar API"
+  },
+  "testApi": {
+    "titulo": "Testar integração com a API",
+    "botaoBuscar": "Buscar certificados",
+    "buscando": "Buscando...",
+    "erroAoBuscar": "Não foi possível buscar os certificados."
   },
   "languages": {
     "pt-BR": "Português",
-    "en-US": "English"
+    "en-US": "English",
+    "label": "Idioma ativo"
   },
   "certificates": {
     "title": "Lista dos certificados gerados",

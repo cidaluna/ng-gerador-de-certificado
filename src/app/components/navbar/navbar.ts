@@ -7,6 +7,7 @@ import { LanguageService } from '../../i18n/language.service';
 
 @Component({
   selector: 'app-navbar',
+  standalone: true,
   imports: [RouterModule, TranslocoModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
@@ -16,6 +17,11 @@ export class Navbar {
 
   readonly languages = SUPPORTED_LOCALES;
   readonly currentLang = this.translation.currentLang;
+
+
+  teste() {
+  alert('Funcionou!');
+}
 
   setLanguage(locale: AppLocale): void {
     void this.translation.setLanguage(locale).catch((err) => {
