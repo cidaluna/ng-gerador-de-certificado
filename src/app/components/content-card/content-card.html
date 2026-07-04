@@ -1,0 +1,17 @@
+<h5 class="content-card-main__heading">
+  Selecione a instituição que vc tem interesse:
+</h5>
+
+<div class="content-card-main">
+  <button
+    type="button"
+    class="content-card-main__card"
+    *ngFor="let card of cards()"
+    [class.content-card-main__card--selected]="selectedNumero() === card.numero"
+    (click)="onSelect(card)"
+  >
+    <span class="content-card-main__number">{{ card.numero }}</span>
+    <h6 class="content-card-main__title">{{ card.titulo }}</h6>
+    <p class="content-card-main__subtitle">{{ card.subtitulo }}</p>
+  </button>
+</div>

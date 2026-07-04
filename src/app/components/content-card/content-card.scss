@@ -1,0 +1,77 @@
+// Variáveis locais ao componente. Se o projeto já tiver um design system
+// (ex.: _variables.scss global), troque estes valores por tokens compartilhados.
+$card-gap: 1rem;
+$card-radius: 0.5rem;
+$card-border-color: #d9dee3;
+$card-border-color-selected: #2f6fed;
+$card-bg: #ffffff;
+$card-bg-selected: #eef4ff;
+$text-color-primary: #1f2937;
+$text-color-secondary: #6b7280;
+
+.content-card-main__heading {
+  margin-bottom: $card-gap;
+  font-weight: 600;
+  color: $text-color-primary;
+}
+
+.content-card-main {
+  display: grid;
+  // 2 colunas fixas em telas médias/grandes, conforme pedido ("2 em 2 por linha")
+  grid-template-columns: repeat(2, 1fr);
+  gap: $card-gap;
+
+  // Abaixo de 480px, empilha em 1 coluna para não espremer o conteúdo
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content-card-main__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid $card-border-color;
+  border-radius: $card-radius;
+  background-color: $card-bg;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: $card-border-color-selected;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $card-border-color-selected;
+    outline-offset: 2px;
+  }
+
+  &--selected {
+    border-color: $card-border-color-selected;
+    background-color: $card-bg-selected;
+    box-shadow: 0 0 0 1px $card-border-color-selected;
+  }
+}
+
+.content-card-main__number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $text-color-secondary;
+}
+
+.content-card-main__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $text-color-primary;
+}
+
+.content-card-main__subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  color: $text-color-secondary;
+}

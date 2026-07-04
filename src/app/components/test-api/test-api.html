@@ -8,6 +8,12 @@
     </div>
 
     <div class="content-card">
+      <h4>Nasce com retorno de chamada HTTP</h4>
+      <app-content-card></app-content-card>
+    </div>
+    <br><br>
+    <div class="content-card">
+      <h4>Clica para realizar chamada HTTP</h4>
       <button type="button" (click)="buscarCertificadosApi()" [disabled]="loading()">
         @if (loading()) {
         {{ 'testApi.buscando' | transloco }}
@@ -19,8 +25,8 @@
       @if (erro()) {
         <p class="erro">{{ erro()! | transloco }}</p>
       }
-
-      <h4>Dados dinâmicos abaixo:</h4>
+      <br><br>
+      <h5>Dados dinâmicos abaixo:</h5>
       @if (certificados().length > 0) {
         <ul class="lista-certificados">
           @for (cert of certificados(); track cert.id) {

@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestApi } from './test-api';
-import { TranslocoTestingModule } from '@jsverse/transloco';
+import { ContentCard } from './content-card';
 
-describe('TestApi', () => {
-  let component: TestApi;
-  let fixture: ComponentFixture<TestApi>;
+describe('ContentCard', () => {
+  let component: ContentCard;
+  let fixture: ComponentFixture<ContentCard>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TestApi, TranslocoTestingModule.forRoot({})],
+      imports: [ContentCard],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TestApi);
+    fixture = TestBed.createComponent(ContentCard);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

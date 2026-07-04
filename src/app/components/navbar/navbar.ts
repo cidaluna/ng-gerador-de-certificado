@@ -18,11 +18,6 @@ export class Navbar {
   readonly languages = SUPPORTED_LOCALES;
   readonly currentLang = this.translation.currentLang;
 
-
-  teste() {
-  alert('Funcionou!');
-}
-
   setLanguage(locale: AppLocale): void {
     void this.translation.setLanguage(locale).catch((err) => {
       console.error('[i18n] falha ao trocar idioma:', err);

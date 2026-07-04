@@ -3,11 +3,12 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { CertificateService } from '../../services/certificate';
 import { LanguageService } from '../../i18n/language.service';
 import { FakeApi } from '../../interfaces/certificate.interface';
+import { ContentCard } from "../content-card/content-card";
 
 @Component({
   selector: 'app-test-api',
   standalone: true,
-  imports: [TranslocoModule],
+  imports: [TranslocoModule, ContentCard],
   templateUrl: './test-api.html',
   styleUrl: './test-api.scss',
 })
