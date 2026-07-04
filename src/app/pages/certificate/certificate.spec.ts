@@ -4,7 +4,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 
 import { Certificate } from './certificate';
-import { TranslationService } from '../../i18n/translation.service';
+import { TranslocoTestingModule } from '@jsverse/transloco';
 
 describe('Certificate', () => {
   let component: Certificate;
@@ -13,7 +13,19 @@ describe('Certificate', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Certificate],
-      providers: [provideRouter([]), provideHttpClient(), provideHttpClientTesting(), TranslationService],
+      providers: [provideRouter([]), provideHttpClient(), provideHttpClientTesting(),
+      TranslocoTestingModule.forRoot({
+        langs: {
+          pt: {},
+          en: {},
+          es: {},
+        },
+        translocoConfig: {
+          availableLangs: ['pt-BR', 'en-US', 'es-ES'],
+          defaultLang: 'pt-BR',
+        },
+      })
+    ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Certificate);

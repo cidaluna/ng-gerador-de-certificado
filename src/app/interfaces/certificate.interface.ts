@@ -9,3 +9,9 @@ export interface FakeApi {
   curso: string;
   cargaHoraria: number;
 }
+
+export interface InstitutionCard {
+  numero: number;
+  titulo: string;
+  subtitulo: string;
+}

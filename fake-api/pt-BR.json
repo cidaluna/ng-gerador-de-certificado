@@ -2,5 +2,27 @@
   "certificados": [
     { "id": 1, "curso": "Introdução ao Angular", "cargaHoraria": 20 },
     { "id": 2, "curso": "TypeScript Avançado", "cargaHoraria": 15 }
+  ],
+  "cards": [
+    {
+      "numero": 1,
+      "titulo": "USP",
+      "subtitulo": "Universidade de São Paulo"
+    },
+    {
+      "numero": 2,
+      "titulo": "UNICAMP",
+      "subtitulo": "Universidade Estadual de Campinas"
+    },
+    {
+      "numero": 3,
+      "titulo": "UFSCar",
+      "subtitulo": "Universidade Federal de São Carlos"
+    },
+    {
+      "numero": 4,
+      "titulo": "ITA",
+      "subtitulo": "Instituto Tecnológico de Aeronáutica"
+    }
   ]
 }

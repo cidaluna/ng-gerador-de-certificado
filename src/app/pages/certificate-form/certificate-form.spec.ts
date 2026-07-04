@@ -3,7 +3,7 @@ import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CertificateForm } from './certificate-form';
-import { TranslationService } from '../../i18n/translation.service';
+import { TranslocoTestingModule } from '@jsverse/transloco';
 
 describe('CertificateForm', () => {
   let component: CertificateForm;
@@ -11,8 +11,21 @@ describe('CertificateForm', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CertificateForm],
-      providers: [provideHttpClient(), provideHttpClientTesting(), TranslationService],
+      imports: [
+        CertificateForm,
+        TranslocoTestingModule.forRoot({
+          langs: {
+            pt: {},
+            en: {},
+            es: {},
+          },
+          translocoConfig: {
+            availableLangs: ['pt-BR', 'en-US', 'es-ES'],
+            defaultLang: 'pt-BR',
+          },
+        })
+      ],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CertificateForm);

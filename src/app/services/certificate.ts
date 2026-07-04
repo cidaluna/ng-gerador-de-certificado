@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Certificate, FakeApi } from '../interfaces/certificate.interface';
+import { Certificate, FakeApi, InstitutionCard } from '../interfaces/certificate.interface';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CertificateService {
   certificates: Certificate[] = [];
-  private readonly httpFakeApi = inject(HttpClient);
+  private readonly http = inject(HttpClient);
 
   constructor(){}
 
@@ -18,6 +18,10 @@ export class CertificateService {
   }
 
   listFakeApi(): Observable<FakeApi[]> {
-    return this.httpFakeApi.get<FakeApi[]>('http://localhost:3000/certificados');
+    return this.http.get<FakeApi[]>('http://localhost:3000/certificados');
+  }
+
+  listInstitutonCard(): Observable<InstitutionCard[]> {
+    return this.http.get<InstitutionCard[]>('http://localhost:3000/cards');
   }
 }

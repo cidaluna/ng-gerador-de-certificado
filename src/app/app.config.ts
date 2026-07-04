@@ -1,7 +1,6 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-import { provideTranslationInitializer } from './i18n/provide-translation';
 import { routes } from './app.routes';
 import { provideTransloco } from '@jsverse/transloco';
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from './i18n/supported-locales';
@@ -20,10 +19,9 @@ export const appConfig: ApplicationConfig = {
         availableLangs: SUPPORTED_LOCALES, // nao repete ['pt', 'en', 'es'],  seus AppLocale possíveis ficam num único lugar
         defaultLang: DEFAULT_LOCALE,
         reRenderOnLangChange: true, // re-renderiza templates ao trocar idioma
-        prodMode: false,
+        prodMode: false, //
       },
       loader: TranslocoHttpLoader,
     }),
-    provideTranslationInitializer(),
   ],
 };
